@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Roboto:wght@300;400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loader {
+	border-top-color: #3498db;
+	-webkit-animation: spinner 1.5s linear infinite;
+	animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.progressBar {
+  --bar-bg: grey;
+  --seek-before-width: 0;
+  --seek-before-color: rgb(66, 63, 63);
+  
+
+  appearance: none;
+  background: grey;
+  border-radius: 10px;
+  position: relative;
+  
+  height: 6px;
+  outline: none;
+}
+
+.progressBar::before {
+  
+  height: 11px;
+  
+  background-color: greenyellow;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(0, 0, 0) ;
+  cursor: pointer;
+  position: relative;
+  
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+.progressBar:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+  background: rgb(0, 0, 0);
+}
+
+.seek-bar::-webkit-slider-runnable-track {
+  background-color:rgb(21, 15, 15);
+  height: 0.5rem;
+	border-radius: 10px;
+}
+
+.seek-bar::-webkit-slider-thumb{
+	background-color: white;
+	height: 0.5rem;
+	width: auto;
+}
+
