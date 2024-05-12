@@ -1,3 +1,5 @@
+# Better Spotify
+
 Better Spotify is a web application that offers a refined approach to music discovery, tailoring playlists and recommendations to suit individual tastes. Dive into a world of curated tracks and personalized suggestions that go beyond the ordinary. With MelodyCraft, your music journey is crafted to perfection.
 
 ## Features
